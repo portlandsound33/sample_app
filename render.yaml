@@ -1,0 +1,13 @@
+# Render Blueprint: New + > Blueprint, then pick this repo.
+services:
+  - type: web
+    name: telemetry-bench
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+    healthCheckPath: /_stcore/health
+    autoDeploy: true
+    envVars:
+      - key: APP_GREETING
+        value: Hello from render.yaml

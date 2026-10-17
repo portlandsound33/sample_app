@@ -1,0 +1,9 @@
+[server]
+headless = true
+maxUploadSize = 5          # MB; keeps the free instance's 512 MB RAM safe
+
+[browser]
+gatherUsageStats = false
+
+[theme]
+primaryColor = "#1c6b8a"
